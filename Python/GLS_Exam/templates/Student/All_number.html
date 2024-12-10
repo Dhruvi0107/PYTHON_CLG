@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>All The Numbers</title>
+</head>
+<body>
+	<h1>ALL THE NUMBERS</h1>
+	{{data}}
+
+	<br><br>
+	<h1>EVEN NUMBERS</h1>
+	{% for datas in data %}
+		{% if datas|divisibleby:2 %}
+			{{ datas }}
+		{% endif %}
+	{% endfor %}
+
+	<br><br>
+	<h1>LOWER CASE</h1>
+	{% for names in name %}
+		{{ names|lower }}
+	{% endfor %}
+
+	<br><br>
+	<h1>LENGTH OF THE DATA</h1>
+	{% for names in name %}
+		{{ names|length }}
+	{% endfor %}
+</body>
+</html>

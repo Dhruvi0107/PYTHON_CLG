@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Show Student Details</title>
+</head>
+<body align="center">
+	<h1>ALL THE STUDENTS</h1><br><br>
+	<table border="3" align="center">
+		<thead>
+			<tr>
+				<th>Student ID</th>
+				<th>Student Username</th>
+				<th>Student Password</th>
+				<th>Student Firstname</th>
+				<th>Student Lastname</th>
+				<th>Student Age</th>
+				<th>Student Course</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for students in studentss %}
+			<tr>
+				<td>{{ students.Student_ID }}</td>
+				<td>{{ students.Student_Username }}</td>
+				<td>{{ students.Student_Password }}</td>
+				<td>{{ students.Student_Firstname }}</td>
+				<td>{{ students.Student_Lastname }}</td>
+				<td>{{ students.Student_Age }}</td>
+				<td>{{ students.Student_Course }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

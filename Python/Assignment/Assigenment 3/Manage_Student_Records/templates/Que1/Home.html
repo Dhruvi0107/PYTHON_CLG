@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Home Page</title>
+	</head>
+	<body align="center">
+		<h1>WELCOME TO THE HOME PAGE</h1>
+		<p align="center">Are You Add New Student..?<a href="{% url 'Add_Student' %}">ADD STUDENT</a></p>
+		<p align="center">Can You Show All The Student..?<a href="{% url 'List_Student' %}">LIST STUDENT</a></p>
+		<p align="center">Are You Find Student By City..?<a href="{% url 'Filter_Student' %}">FIND STUDENT</a></p>
+		<p align="center">Are You Delete Student By ID..?<a href="{% url 'Delete_Student' %}">DELETE STUDENT</a></p>
+		<p align="center">Are You Update Student Basis Of ID..?<a href="{% url 'Update_Student' student_ID=student.Student_ID %}">UPDATE STUDENT</a></p>
+	</body>
+</html>

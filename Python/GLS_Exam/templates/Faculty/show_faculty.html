@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Show Faculty Page</title>
+</head>
+<body align="center">
+	<h1>ALL THE FACULTY</h1>
+	<table border="3" align="center">
+		<thead>
+			<tr>
+				<th>Faculty ID</th>
+				<th>Faculty Username</th>
+				<th>Faculty Password</th>
+				<th>Faculty Firstname</th>
+				<th>Faculty Lastname</th>
+				<th>Faculty Age</th>
+				<th>Faculty Salary</th>
+				<th>Faculty Contactno</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for Facultys in Facultyss %}
+				<tr>
+					<td>{{ Facultys.Faculty_ID }}</td>
+					<td>{{ Facultys.Faculty_Username }}</td>
+					<td>{{ Facultys.Faculty_Password }}</td>
+					<td>{{ Facultys.Faculty_Firstname }}</td>
+					<td>{{ Facultys.Faculty_Lastname }}</td>
+					<td>{{ Facultys.Faculty_Age }}</td>
+					<td>{{ Facultys.Faculty_Salary }}</td>
+					<td>{{ Facultys.Faculty_Contactno }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

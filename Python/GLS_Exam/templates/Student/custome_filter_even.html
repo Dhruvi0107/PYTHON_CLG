@@ -1,0 +1,23 @@
+{% load is_even %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Custome Even Filter</title>
+</head>
+<body>
+	<h1>Use For Particular Value</h1>
+	{{ 10|is_even }}
+	
+	<h1>EVEN AND ODD NUMBER</h1>
+	
+	{% for number in data %}
+		{% if number|is_even %}
+			{{ number }} is even<br>
+		{% else %}
+			{{ number }} is odd<br>
+		{% endif %}
+	{% endfor %}
+</body>
+</html>

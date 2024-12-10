@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Update Student Page</title>
+	</head>
+	<body>
+		<h1 align="center">UPDATE STUDENT DETAILS ON THE BASIS OF ID</h1>
+
+		<form method="POST" action="{% url 'Update_Student' student_ID=student.Student_ID %}" align="center">
+		    {% csrf_token %}
+		    
+		    Student Name : <input type="text" name="name" value="{{ student.Student_Name }}" required><br><br>
+		    Student Email : <input type="email" name="email" value="{{ student.Student_Email }}" required><br><br>
+		    Student City : <input type="text" name="city" value="{{ student.Student_City }}" required><br><br>
+		    Student Age : <input type="text" name="age" value="{{ student.Student_Age }}" required><br><br>
+		    Student ID : <input type="text" name="id" value="{{ student.Student_ID }}" required><br><br>
+
+		    <input type="submit" value="SAVE CHANGES">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Show Peon Page</title>
+</head>
+<body align="center">
+	<h1>ALL THE PEONS</h1><br><br>
+
+	<table border="3" align="center">
+		<thead>
+			<tr>
+				<th>Peon ID</th>
+				<th>Peon Username</th>
+				<th>Peon Password</th>
+				<th>Peon Firstname</th>
+				<th>Peon Lastname</th>
+				<th>Peon Age</th>
+				<th>Peon Salary</th>
+				<th>Peon Contactno</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for Peons in Peonss %}
+				<tr>
+					<td>{{ Peons.Peon_ID }}</td>
+					<td>{{ Peons.Peon_Username }}</td>
+					<td>{{ Peons.Peon_Password }}</td>
+					<td>{{ Peons.Peon_Firstname }}</td>
+					<td>{{ Peons.Peon_Lastname }}</td>
+					<td>{{ Peons.Peon_Age }}</td>
+					<td>{{ Peons.Peon_Salary }}</td>
+					<td>{{ Peons.Peon_Contactno }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

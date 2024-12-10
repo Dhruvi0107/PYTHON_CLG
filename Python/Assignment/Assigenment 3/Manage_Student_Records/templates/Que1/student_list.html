@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>List of Student</title>
+	</head>
+	<body>
+		<h1 align="center">LIST OF THE ALL STUDENT</h1>
+		<table border="3" align="center">
+			<thead>
+				<tr>
+					<th>STUDENT ID</th>
+					<th>STUDENT NAME</th>
+					<th>STUDENT AGE</th>
+					<th>STUDENT EMAIL</th>
+					<th>STUDENT CITY</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for stu in studentss %}
+					<tr>
+						<td>{{stu.Student_ID}}</td>
+						<td>{{stu.Student_Name}}</td>
+						<td>{{stu.Student_Age}}</td>
+						<td>{{stu.Student_Email}}</td>
+						<td>{{stu.Student_City}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>

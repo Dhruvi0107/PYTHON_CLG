@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add Student Page</title>
+	</head>
+	<body> 
+		<h1 align="center">ADD STUDENT</h1>
+
+		<form method="POST" action="" align="center">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" value="ADD">
+		</form>
+	</body>
+</html>

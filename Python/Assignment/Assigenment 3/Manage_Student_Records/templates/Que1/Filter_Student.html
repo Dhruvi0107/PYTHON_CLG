@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Find User Based On The City</title>
+	</head>
+	<body><br><br>
+
+		<form method="post" action="" align="center">
+	        {% csrf_token %}
+	        <input type="text" id="city" name="Student_City" placeholder="Enter city">
+	        <button type="submit">FILTER</button>
+	    </form>
+
+
+        <h1 align="center">STUDENT LIST</h1>
+
+	    {% if students %}
+		    <table border="3" align="center">
+		        <tr>
+		            <th>Name</th>
+		            <th>Age</th>
+		            <th>Email</th>
+		            <th>City</th>
+		        </tr>
+		        {% for student in students %}
+		        <tr>
+		            <td>{{ student.Student_Name }}</td>
+		            <td>{{ student.Student_Age }}</td>
+		            <td>{{ student.Student_Email }}</td>
+		            <td>{{ student.Student_City }}</td>
+		        </tr>
+		        {% endfor %}
+		    </table>
+	    {% else %}
+	    	<p align="center">No students found for this city.</p>
+	    {% endif %}
+	</body>
+</html>
